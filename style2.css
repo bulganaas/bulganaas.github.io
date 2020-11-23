@@ -1,0 +1,249 @@
+body {
+   margin: 0;
+   padding: 0;
+   color: #333;
+   font-size: 14px;
+   font-family: Arial, serif, sans-serif;
+   line-height: 1.5;
+}
+.menu2 {
+    padding: 10px 10px ;
+    margin: 0;
+    background: #fff;
+   
+}
+.menu2 li a {
+    color: #333;
+   
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+a{
+    text-decoration: none;
+   
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+}
+.left {
+    float: left;
+    
+}
+.right {
+    float: right;
+}
+.clr {
+    clear: both;
+}
+.top {
+    border-bottom: 1px solid #e1e1e1;
+    background: #ccc;
+    padding: 10px 0;
+}
+
+.social {
+
+}
+.busad {
+
+}
+.header {
+    padding:15px 0;
+}
+.logo {
+    width: 20%;
+}
+.logo img {
+     width: 80%;
+     margin-top: 10px;
+     
+}
+.banner {
+    width: 100%;
+    
+   
+}
+.banner img {
+    width: 100%;
+  
+}
+
+.menu {
+    height: 40px;
+    width:100%;
+   background: #fafafa;
+   border-bottom: 1px solid #f2f2f2;
+   font-size: 13px;
+   z-index: 22;
+   
+   
+}
+.menu ul {
+   margin: 0 ;
+   padding: 0 150px;  
+   border: 0;
+   float: right;
+}
+.menu li {
+   display: inline-block;
+}
+.menu li a {
+   position: relative;
+   color: #333;
+   font-size: 12px;
+    cursor: pointer;
+   line-height: 39px;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 0 24px 0 10px;
+   display: block;
+   transition: all 0.3s ease-out;
+}
+.menu li a:hover {
+   color: #ff0000;
+   text-decoration: none;
+}
+.menu2 li a:hover {
+    color: #ff0000;
+    text-decoration: none;
+ }
+.main {
+    padding: 20px 0;
+}
+.a1 {
+    width: 70%;
+     }
+.ontsloh {
+    position: relative;
+    margin-bottom: 20px;
+}
+.ontsloh img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.ontsloh .caption {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background: rgba(238, 176, 225,0.7);
+    /*rgba (0,0,0,11); өнгийг нь шингээж харуулна*/
+    top: 0;
+    right: 0;
+    padding: 15px;
+    box-sizing: border-box;
+} /*position absolute davharlah gj bgaagaa absolute gene*/
+.ontsloh .caption h3 {
+    color: #fff;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 0;
+    font-weight: normal;
+}
+.gurav {
+    margin: 0 -12px;
+}
+.gurav .g1 {
+    width: 30.4%;
+    margin: 0 12px;
+    position: relative;
+}
+.gurav .g1 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /*object-fit: cover; zurag butneer харуулна.*/
+}
+.gurav .g1 .caption {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(pink, pink, pink, 0.5);
+    padding: 15px;
+    box-sizing: border-box;
+}
+.gurav .g1 .caption h3 {
+    color:#fff;
+    font-size: 16px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0,0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-weight: normal;
+}
+.title {
+    height: 30px;
+    margin: 20px 0;
+    background: #e2a9a9;
+    
+
+}
+
+.two {
+    margin: 0 -12px;
+}
+.b1 {
+    width: 47%;
+    margin: 0 12px;
+  
+}
+.b1-tom {
+   
+}
+.b1-tom img {
+    width:100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+.b1-tom h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 10px 0;
+    /*margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;*/
+}
+.b1-tom h3 a {
+    color: #141414;
+}
+.b1-tom p {
+    color: #616161;
+}
+.b1-small {
+    margin-bottom: 20px; 
+}
+.b1-small .b1-image {
+    width: 38%;
+}
+.b1-small .b1-image img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+.b1-small .b1-text {
+    width: 59%;
+}
+.b1-small .b1-text h3 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+.b1-small .b1-text h3 a {
+    color: #000;
+}
+.a2 {
+    width: 29%;
+    }
+  /*  flexbox margin auto */
