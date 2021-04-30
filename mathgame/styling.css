@@ -1,0 +1,197 @@
+html{
+    height: 100%;
+    background: radial-gradient(circle,#fff, #ccc);
+    background: -webkit-radial-gradient(circle,#fff, #ccc);
+    background: -o-radial-gradient(circle,#fff, #ccc);
+    background: -moz-radial-gradient(circle,#fff, #ccc);
+}
+#container{
+    height: 400px;
+    width: 550px;
+    background-color: #9DD2EA;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px   #9DD2EA;
+    -moz-box-shadow: 0px 4px 0px 0px  #9DD2EA;
+    -webkit-box-shadow: 0px 4px 0px 0px   #9DD2EA;
+    position: relative;
+
+}
+#score{
+    background-color: #F1FF92;
+    color:#888e5F;
+    padding: 11px;
+    position: absolute;
+    left: 500px;
+    box-shadow: 0px 4px 0px #9da853;
+
+}
+#correct{
+    position: absolute;
+    left: 260px;
+    background-color: #42e252;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+#wrong{
+    position: absolute;
+    left: 250px;
+    background-color: #de401a;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+#question{
+    width:450px;
+    height:150px;
+    margin: 50px auto 10px auto;
+    background-color: #9da0ea;
+    box-shadow: 0px 4px #535aa8;
+    font-size: 80px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    color: black;
+    position: relative;
+}
+#instruction{
+    width: 450px;
+    height: 50px;
+    background-color: #B481d9;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0px 4px #8153a8;/* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+}
+  
+#choosewisely{
+    font-size: 15px;
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    top:75px;
+    left: 150px;
+    line-height: 11px;
+    /* display: none; */
+}
+table{
+    width: 70%;
+}
+th{
+    text-align: left;
+    height: 10px;
+}
+p{
+    color: rgb(2, 2, 31);
+    text-indent: 60px;
+    text-transform: uppercase;
+}
+#choices{
+    width: 450px;
+    height: 100px;
+    margin: 5px auto;
+    border: 10px;
+}
+.box{
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0 , 0, 0.2);
+    text-align: center; /*text-iig hevtee chigleld golluulna */
+    line-height: 80px; /*text-iin bairshiliig bosoo chigleld 80px-d abaachij golluulna  */
+    position: relative; /*энгийн байршилд элементийг хооронд relative болгоно.  */
+    transition: all 0.2s; /* бүгд 0,2 секунд шилжилт хийгдэнэ */
+    -webkit-transition: all 0.2s; /*Safari дэмждэг*/
+    -moz-transition: all 0.2s;/*mozilla дэмждэг*/
+    -o-transition: all 0.2s;/*opera дэмждэг*/
+    -ms-transition: all 0.2s;/*microsoft дэмждэг*/
+   
+}
+.box:hover, #startreset:hover{  /*mouse-aar box, startreset hurehed daraah uurchlult hiigdene*/
+     background-color: #9c89f6; /*ariin ungu нил ягаан болно*/
+    color: white;  /*текстийн өнгийг цагаан болгоно*/
+   box-shadow: 0px 4px #6b54d3; /*h-offset: заавал хөндлөн чиглэлд сүүдрийг оруулна, эерэг үр дүн нь 
+                                  хайрцагны баруун талд сүүдрийг, сөрөг утга нь хайрцагны зүүн талд сүүдэр өгнө. 
+                                  v-offset: заавал босоо чиглэлд сүүдрийг оруулна, эерэг үр дүн нь хайрцагны 
+                                  доод талд, сөрөг утга нь хайрцагны дээд талд сүүдэр өгнө. 
+                                  өнгө: нэмэлтээр сүүдэрт өнгө оруулна.*/ 
+   -moz-box-shadow: 0px 4px #6b54d3; 
+   -webkit-box-shadow: 0px 4px #6b54d3;  
+}
+.box:active, #startreset:active{ /*selector нь идэвхитэй байгаа холбоосүүдын загвар гарна. Товчлуурыг дарахад link нь 
+                            идэвхитэй болно*/ 
+    box-shadow: 0px 0px #6b54d3;
+    -moz-box-shadow: 0px 0px #6b54d3; 
+    -webkit-box-shadow: 0px 0px #6b54d3; 
+
+      top: 4px; /*дээд талаас 4px дарагдана*/
+}
+#box4{
+    margin-right: 0;
+
+}
+#startreset{
+    width: 78px;
+    padding: 10px; /*тодорхойлсон аль нэг border-т элементийн агуулгыг тойруулаад зайг үүсгэнэ 
+    дээд, баруун, доод ба зүүн талд элемент бүрт padding-дотор тал тохируулна*/
+    background-color: rgba(255,255, 255,0.5);
+    margin: 0 auto; 
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0 , 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0 , 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0 , 0, 0.2);
+    text-align: center; /*text-iig hevtee chigleld golluulna */
+    position: relative; /*энгийн байршилд элементийг хооронд relative болгоно.  */
+    transition: all 0.2s; /* бүгд 0,2 секунд шилжилт хийгдэнэ */
+    -webkit-transition: all 0.2s; /*Safari дэмждэг*/
+    -moz-transition: all 0.2s;/*mozilla дэмждэг*/
+    -o-transition: all 0.2s;/*opera дэмждэг*/
+    -ms-transition: all 0.2s;/*microsoft дэмждэг*/
+}
+#timeremaining{
+    width: 152px;
+    padding: 10px;
+    position: absolute;
+    top: 395px;
+    left:400px;
+    background-color: rgba(181, 235 , 36, 0.8);
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0 , 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0 , 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0 , 0, 0.2);
+        /* visibility: hidden; харагдах байдлыг нууна */
+    /* rgba(149,223, 92, 0.691) */ 
+    display: none; /*харагдах байдлыг нууна*/
+}
+#gameOver{
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(#F3CA6B, #F3706C);/* шараас ягаанруу уусгалт оруулна*/
+    background: -webkit-linear-gradient(#F3CA6B, #F3706C);
+    background: -o-linear-gradient(#F3CA6B, #F3706C);
+    background: -moz-linear-gradient(#F3CA6B, #F3706C);
+    color: white;
+    font-size: 2.5em;/*агуулж байгаа элементийн текстийн хэмжээг 2,5 үржүүлсэнтэй тэнцүү */
+    text-align: center; /*gameOver доторх текстийг голлуулна*/
+    text-transform: uppercase; /*идэвхижүүлсэн текстийг томоор болгоно */
+    position: absolute; /*The element is positioned relative to its first positioned 
+    (not static) ancestor element*/
+     top: 100px; /*байршлыг дээрээс 100px тохируулна*/
+     left: 45px;  /*Зүүн талаас 45px байршина*/
+     z-index: 2; /*элементийн багцийн дарааллыг тохируулна.Сөрөг утгатай байж болно */
+     display:none; /*харагдах байдлыг нууна*/
+
+
+
+}
+
+
+
+
+

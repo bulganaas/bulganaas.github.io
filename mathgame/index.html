@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Maths Game</title>
+        <meta charset= "utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="styling.css">
+    </head>
+    <body>  
+        <audio id="myAudio">
+            <source src="wrong.mp3" type="audio/mpeg">
+          </audio>
+        <div id="container">
+           
+            <div id="score">
+                Score: <span id="scorevalue">0</span> 
+            </div>
+            <div id="correct"> 
+                 Correct
+            </div>
+            <div id="wrong">
+                Try again
+            </div>
+           
+            <div id="question">
+            </div>
+             <div id="choosewisely">
+                <p><b>Choose Wisely</b></p>
+                <table>
+                  <tr>
+                      <th> Difficulty</th>
+                      <th> Operator</th>
+                      
+                  </tr>             
+                  <tr>
+                    <td><input type="radio" id="rd1" name="Difficulty" value="1 digit">
+                        <label for="Easy">Easy (1 digit)</label><br>
+                        <input type="radio" id="rd2" name="Difficulty" value="2 digit">
+                        <label for="medium">Medium (2 digit)</label><br>
+                        <input type="radio" id="rd3" name="Difficulty" value="3 digit">
+                        <label for="hard"> Hard (3 digit)</label><br>
+                        <input type="radio" id="rd4" name="Difficulty" value="4 digit">
+                        <label for="extreme"> Extreme (4 digit)</label>
+                    </td> 
+                    
+                    
+                       <td> 
+                            <input type="radio" id="rd5" name="addition" value="addition">
+                            <label for="addition">Addition</label><br>
+                            <input type="radio" id="rd6" name="subtraction" value="subtraction">
+                            <label for="subtraction">Subtraction</label><br>
+                            <input type="radio" id="rd7" name="multiplication" value="multiplication">
+                            <label for="multiplication"> Multiplication</label><br>
+                            <input type="radio" id="rd8" name="division" value="division">
+                            <label for="division">Division</label>
+                       </td>
+
+                       
+                   </tr> 
+                </table>
+             </div>
+        
+            <div id="instruction">
+               <b>Math Game:</b> Click on the correct answer
+              </div>
+              <div id="choices">
+                 <div id="box1" class="box"></div>
+                 <div id="box2" class="box"></div>
+                 <div id="box3" class="box"></div>
+                 <div id="box4" class="box"></div>
+              </div>
+              <div id="startreset">
+                  Start Game
+              </div>
+              <div id="timeremaining">
+                Time remaining: <span id="timeremainingvalue">60</span>sec 
+                 <!-- span нь div-тэй адил боловч inline/текст ба document-ын зарим хэсгийг тодорхойлно/  элемент юм.  -->
+              </div>
+              <div id="gameOver">
+                  
+              </div>
+        </div>
+        <script src="javascript.js"></script>
+    </body>
+</html>
