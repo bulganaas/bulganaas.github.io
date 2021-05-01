@@ -4,9 +4,12 @@
         <title>Maths Game</title>
         <meta charset= "utf-8">
         <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styling.css">
     </head>
     <body>  
+        <div id="mathgame"><h1>Math Game</h1></div>
         <audio id="myAudio">
             <source src="wrong.mp3" type="audio/mpeg">
           </audio>
@@ -25,7 +28,7 @@
             <div id="question">
             </div>
              <div id="choosewisely">
-                <p><b>Choose Wisely</b></p>
+                <p><b>Choose Options</b></p>
                 <table>
                   <tr>
                       <th> Difficulty</th>
@@ -34,25 +37,25 @@
                   </tr>             
                   <tr>
                     <td><input type="radio" id="rd1" name="Difficulty" value="1 digit">
-                        <label for="Easy">Easy (1 digit)</label><br>
+                        <label for="rd1">Easy (1 digit)</label><br>
                         <input type="radio" id="rd2" name="Difficulty" value="2 digit">
-                        <label for="medium">Medium (2 digit)</label><br>
+                        <label for="rd2">Medium (2 digit)</label><br>
                         <input type="radio" id="rd3" name="Difficulty" value="3 digit">
-                        <label for="hard"> Hard (3 digit)</label><br>
+                        <label for="rd3"> Hard (3 digit)</label><br>
                         <input type="radio" id="rd4" name="Difficulty" value="4 digit">
-                        <label for="extreme"> Extreme (4 digit)</label>
+                        <label for="rd4"> Extreme (4 digit)</label>
                     </td> 
                     
                     
                        <td> 
-                            <input type="radio" id="rd5" name="addition" value="addition">
-                            <label for="addition">Addition</label><br>
-                            <input type="radio" id="rd6" name="subtraction" value="subtraction">
-                            <label for="subtraction">Subtraction</label><br>
-                            <input type="radio" id="rd7" name="multiplication" value="multiplication">
-                            <label for="multiplication"> Multiplication</label><br>
-                            <input type="radio" id="rd8" name="division" value="division">
-                            <label for="division">Division</label>
+                            <input type="checkbox" id="check1" name="math_operators" value="addition">
+                            <label for="check1">Addition</label><br>
+                            <input type="checkbox" id="check2" name="math_operators" value="subtraction">
+                            <label for="check2">Subtraction</label><br>
+                            <input type="checkbox" id="check3" name="math_operators" value="multiplication">
+                            <label for="check3"> Multiplication</label><br>
+                            <input type="checkbox" id="check4" name="math_operators" value="division">
+                            <label for="check4">Division</label>
                        </td>
 
                        
@@ -61,7 +64,7 @@
              </div>
         
             <div id="instruction">
-               <b>Math Game:</b> Click on the correct answer
+               Click on the correct answer
               </div>
               <div id="choices">
                  <div id="box1" class="box"></div>
@@ -79,7 +82,9 @@
               <div id="gameOver">
                   
               </div>
+              
         </div>
+        
         <script src="javascript.js"></script>
     </body>
 </html>

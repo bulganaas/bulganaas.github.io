@@ -3,8 +3,11 @@ var score; //variable
 var action;
 var timeremaining;
 var correctAnswer;
-const audio = document.getElementById("myAudio");
+var x = 0;
+var y = 0;
 
+const audio = document.getElementById("myAudio");
+var operators_if = document.getElementsByName("math_operators");
 //if we click on the start/reset to play
 document.getElementById("startreset").onclick = 
 function(){
@@ -24,11 +27,20 @@ function(){
           playing = true;
        
           //set score to 0
-
+          show("score");
          score = 0;
 document.getElementById("scorevalue").innerHTML = score;
   // HTMLElementObject.innerHTML = text, Return: A String, representing the HTML content of an element
-        //show countdown box/урвуугаар тоолох хайрцаг харуулна
+      
+          //show instruction box
+
+          show("instruction");
+
+          //show answer box
+
+          show("choices");
+
+      //show countdown box/урвуугаар тоолох хайрцаг харуулна
 
           show("timeremaining");
           timeremaining = 60;
@@ -38,6 +50,8 @@ timeremaining;
 
         //hide game over box
         hide("gameOver");
+        
+     
 
         //change button to reset
         
@@ -54,35 +68,23 @@ document.getElementById("startreset").innerHTML =
     }
 
 }
- 
-     //if we are playing 
-         //reload page
-     //if we are not playing 
-         //set score to 0
-         //show countdown box
-         //reduce time by 1sec in loops
-             //timeleft?
-                  //yes->continue 
-                  //no->gameover
-         //change button to reset
-         //generate new Q&A
-      
+           
 //Clicking on an answer box
-
 
 for(i=1; i<5; i++){
     
 document.getElementById("box" + i).onclick = function(){
+    
     //check if we are playing 
     if(playing == true){ //yes
         if(this.innerHTML == correctAnswer){
         //correct answer
-
             //increase score by 1 
             score++;
 
 document.getElementById("scorevalue").innerHTML = score;
-            //hide wrong box and show correct box
+          
+        //hide wrong box and show correct box
 
             hide("wrong");
             show("correct");
@@ -101,6 +103,7 @@ document.getElementById("scorevalue").innerHTML = score;
             setTimeout(function(){
                 hide("wrong");
             }, 1000);
+            // decreasesec();
         }
     }      
 }   
@@ -126,7 +129,8 @@ function startCountdown(){
 
 document.getElementById("timeremainingvalue").innerHTML = 
 timeremaining;     
-         if(timeremaining == 0){//game over
+         if(timeremaining == 0){
+             //game over
              stopCountdown();
              show("gameOver");
 
@@ -138,7 +142,8 @@ document.getElementById("gameOver").innerHTML =
           playing = false;
           
 document.getElementById("startreset").innerHTML = "Start Game";
-         } 
+         
+} 
      }, 1000);// myVar = setInterval("javascript function", milliseconds);
 }
 
@@ -147,6 +152,12 @@ document.getElementById("startreset").innerHTML = "Start Game";
 function stopCountdown(){
     clearInterval(action); //to stop the execution - clearInterval(myVar); uses the variable returned from setInterval():
 }
+
+//decrease counter by 1 sec
+// function decreasesec(){
+//     timeremaining -= 1;
+// }
+
 
 //hide an element
 
@@ -163,57 +174,65 @@ function show(Id){ //parameter // Declare a function
 //generate question and multiple answers
 
 function generateQA(){
-    var x = 0;
-    var y = 0;
-     //check if the difficulty radio button is checked 
+     
+    
+     
+    //check if the difficulty radio button is checked 
     if(rd1.checked==true){
+    
         x = 1 + Math.round(9 * Math.random());
         y = 1 + Math.round(9 * Math.random());
+        
     }
        
     else if(rd2.checked==true){
+               
         x = 10 + Math.round(99 * Math.random());
         y = 10 + Math.round(99 * Math.random());
     }
     else if(rd3.checked==true){
+   
         x = 100 + Math.round(999 * Math.random());
         y = 100 + Math.round(999 * Math.random());
     }
     else if(rd4.checked==true){
+          
         x = 1000 + Math.round(9999 * Math.random());
         y = 1000 + Math.round(9999 * Math.random());
-      
     }
     else {
        alert("No option is selected");
+       
        location.reload();
 
     }
-     //check if the operation  button is checked 
-    if(rd5.checked==true){
+    //  //check if the operation checkbox is checked 
+    //  var operation = ["add","subtract","multiply", "divide"];
+    if(operators_if[0].checked==true){
         correctAnswer = x+y;
         document.getElementById("question").innerHTML = 
         x + "+" + y;
     }
-    else if(rd6.checked==true){
+
+    else if(operators_if[1].checked==true){
     correctAnswer = x-y; 
     document.getElementById("question").innerHTML = 
     x + "-" + y;
     }
-    else if(rd7.checked==true){
+    else if(operators_if[2].checked==true){
         correctAnswer = x*y; 
         document.getElementById("question").innerHTML = 
         x + "*" + y;
     }
-    else if(rd8.checked==true){
+    else if(operators_if[3].checked==true){
         correctAnswer = x/y
         document.getElementById("question").innerHTML = 
         x + "/" + y;
     }
     else {
-        alert("No Operation is selected");
-        location.reload();
- 
+        // alert("No Operation is selected");
+         location.reload();
+        return false;
      }
       
 
@@ -229,7 +248,22 @@ correctAnswer; //fill one box with the correct answer .toFixed(2)
         if(i != correctPosition){
             var wrongAnswer;
             do{
-                wrongAnswer = (1 + Math.round(9 * Math.random()))* (1 + Math.round(9 * Math.random())); // a wrong answer
+                if(operators_if[0]&&rd1.checked==true){
+                 
+                wrongAnswer = (1 + Math.round(9 * Math.random()))* (1 + Math.round(9 * Math.random())); // a wrong answer is 1 digit
+                }
+                if(operators_if[1]&&rd2.checked==true){
+                 
+                    wrongAnswer = (10 + Math.round(99 * Math.random()))* (10 + Math.round(99 * Math.random())); // a wrong answer is 2 digit
+                    }
+                if(operators_if[2]&&rd3.checked==true){
+                 
+                wrongAnswer = (100 + Math.round(999 * Math.random()))* (100 + Math.round(999 * Math.random())); // a wrong answer is 3 digit
+                }
+                if(operators_if[3]&&rd4.checked==true){
+                 
+                    wrongAnswer = (1000 + Math.round(9999 * Math.random()))* (1000 + Math.round(9999 * Math.random())); // a wrong answer is 4 digit
+                    }
     
 }while(answers.indexOf(wrongAnswer)>-1)
 
